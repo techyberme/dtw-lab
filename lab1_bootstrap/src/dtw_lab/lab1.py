@@ -43,7 +43,7 @@ def read_csv_from_google_drive(file_id: str) -> pd.DataFrame:
         return pd.read_csv(io.StringIO(s.decode('utf-8')))
     except Exception as e:
         raise ValueError(f"Unable to read CSV file from Google Drive: {str(e)}")
-    "hello"
+
 
 
 def visualize_data(df: pd.DataFrame) -> None:
