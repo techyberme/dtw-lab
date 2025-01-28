@@ -45,6 +45,7 @@ def read_csv_from_google_drive(file_id: str) -> pd.DataFrame:
         raise ValueError(f"Unable to read CSV file from Google Drive: {str(e)}")
 
 
+
 def visualize_data(df: pd.DataFrame) -> None:
     """
     Visualizes relationships between various features and the 'Charge_Left_Percentage' in the given DataFrame.
