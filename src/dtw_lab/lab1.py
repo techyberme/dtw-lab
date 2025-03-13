@@ -1,5 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import matplotlib
+matplotlib.use('Agg')  ##para que no de problemas el pyplot
 import seaborn as sns
 import io
 import requests
