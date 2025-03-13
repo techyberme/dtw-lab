@@ -43,4 +43,9 @@ jobs:
       run: echo "TODO - Build docker image"
 
     - name: Run integration tests
-      run: echo "TODO - Build docker image"
+      run: |
+         chmod +x ./scripts/build.sh
+         chmod +x ./scripts/integration_test.sh
+         chmod +x ./scripts/release.sh
+         chmod +x ./scripts/deploy.sh
+         
