@@ -40,13 +40,9 @@ jobs:
       run: poetry run pytest
 
     - name: Build Docker image
-      run: |
-            docker build -t team6 .
+      run: docker build -t team6 .
 
     - name: Run integration tests
-      run: |
-         chmod +x ./scripts/build.sh
-         chmod +x ./scripts/integration_test.sh
-         chmod +x ./scripts/release.sh
-         chmod +x ./scripts/deploy.sh
+      run: chmod +x ./scripts/integration_test.sh
+         
          
