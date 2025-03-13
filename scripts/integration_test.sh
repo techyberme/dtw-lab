@@ -2,9 +2,9 @@
 set -e
 
 PACKAGE_VERSION=$(grep -Po '(?<=^version = ")[^"]*' pyproject.toml)
-CONTAINER_NAME="team${TEAM_NUMBER}_container"
+CONTAINER_NAME="team6_container"
 
-docker run -d -p 80:80 --name $CONTAINER_NAME $LOGIN_SERVER/team$TEAM_NUMBER:$PACKAGE_VERSION
+docker run -d -p 80:80 --name $CONTAINER_NAME $LOGIN_SERVER/team6:$PACKAGE_VERSION
 
 echo "Waiting for container to start..."
 sleep 20
