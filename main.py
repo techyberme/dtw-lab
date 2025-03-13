@@ -7,7 +7,7 @@ if __name__=='__main__':
     df = clean_data(df)
     print(df)
 
- ### hola
+ 
     print(f'The mean value for the charge left % is {calculate_statistic('mean',df['Charge_Left_Percentage'])}')
  
 
