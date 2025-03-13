@@ -10,13 +10,13 @@ az account set --subscription $AZURE_SUBSCRIPTION_ID
 #Tell the Azure cloud to create a container using our image.
 az container create \
   --resource-group dtw \
-  --name team${TEAM_NUMBER}dtw \
-  --image ${LOGIN_SERVER}/team${TEAM_NUMBER}:$PACKAGE_VERSION \
+  --name team6dtw \
+  --image ${LOGIN_SERVER}/team6:$PACKAGE_VERSION \
   --os-type Linux \
   --memory 0.5 \
   --cpu 0.25 \
   --ip-address public \
-  --dns-name-label team${TEAM_NUMBER} \
+  --dns-name-label team6 \
   --restart-policy Always \
   --registry-login-server ${LOGIN_SERVER} \
   --registry-username ${REGISTRY_USERNAME} \
