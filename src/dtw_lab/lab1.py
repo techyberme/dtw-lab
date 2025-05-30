@@ -6,13 +6,12 @@ import requests
 from typing import Literal, Union
 
 def clean_data(df: pd.DataFrame) -> pd.DataFrame:
-    """
-    Clean and preprocess the input DataFrame.
-    Args:
-        df (pd.DataFrame): The input DataFrame to be cleaned.
-    Returns:
-        pd.DataFrame: The cleaned and preprocessed DataFrame.
-    """
+    df= df.dropna()
+    df=df.drop(columns=["Serial_Number","Voltage_Cutoff","Nominal_Voltage"])
+    df= df[(df["Avg_Operating_Temperature"] <= 100)]
+    df= df[(df["Days_Since_Production"] <= 20000)]
+    df= df[(df["Current_Voltage"] >= 0.5) & (df["Current_Voltage"] <=2)]
+    df=df[df["Battery_Size"] != "9_Volt"]
     return df
 
 def read_csv_from_google_drive(file_id: str) -> pd.DataFrame:
